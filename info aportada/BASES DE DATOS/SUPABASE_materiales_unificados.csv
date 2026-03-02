@@ -1,0 +1,7 @@
+id,familia,clase,nombre,unidad,grosor,tamano_plancha,precio,merma,activo
+VM-PER,impresion,VINILO MONOMERICO,Monimérico Permanente,m2,,137cm,1.35,0.68,True
+VC3-BRBN,vinilo_corte,VINILO CORTE 3-5 AÑOS,Blanco/Negro BRILLO,m2,,,3.4,0.0,True
+M01-MDF19,rigido,MADERA,Dm 19mm,m2,19mm,246x122,13.8,,True
+PERF-CR,perfileria,CAJÓN RÓTULO,Perfil cajón aluminio,ml,,6m,9.6,,True
+MD-CANT,manipulados,MADERA,Canteado de tableros,ml,,,0.9,,True
+DC,complementos,ADHESIVOS,Cinta doble cara,ml,,,0.17,,True

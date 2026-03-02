@@ -1,0 +1,5 @@
+id,nombre,valor_reposicion,vida_util,consumo_electrico,mantenimiento_anual,minutos_m2,parametros_extra
+hp_latex,HP Latex 330,5000,10,2.04,800,7.8,{}
+plotter_summa,Plotter Summa,2000,10,0.005,50,10.0,{}
+laminadora,Laminadora,2000,10,0.005,50,10.0,{}
+"cnc,CNC,6000,10,11.035,600,0.0,""{""""tiempos_material"""": {""""madera"""": 132, """"dibond"""": 200, """"metacrilato"""": 400, """"aluminio"""": 800}}"""

@@ -1,0 +1,5 @@
+id,clase,nombre,unidad,tamano,precio,activo
+R01-BL,LEDS,Rollo LED frío/cálido,cm,,5.25,True
+R01-RGB,LEDS,Rollo LED RGB,cm,,7.8,True
+FA01-ES1260,FUENTES,Fuente 12V 60w,ud,,16.88,True
+EN01-SUPS,ENCHUFES,Enchufe sencillo,ud,,2.81,True

@@ -1,0 +1,2 @@
+precio_kwh,amortizacion_activa,retal_min_ancho_cm,retal_min_alto_cm,minimo_m2_cobrable,margen_min_cliente_final,margen_min_agencia,mercancias_cajas_gratis,mercancias_precio_caja,bobina_max_laminado_cm,bobina_ancho_1_cm,bobina_ancho_2_cm
+0.45,True,50,30,1.0,0.4,0.25,3,3.0,140,137,160

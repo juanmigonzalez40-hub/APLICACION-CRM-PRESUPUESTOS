@@ -1,0 +1,5 @@
+id,nombre,coste_mes,horas_pagadas_mes,productividad,n_personas,coste_hora_productiva
+p1_admin,P1: Admin + Rotulación,2516,168,0.8,1,18.72
+p2_diseno,P2: Diseño + Gestión,3013,168,0.8,1,22.42
+p3p4_carpinteria,P3+P4: Carpintería (2 pers),5032,168,0.85,2,35.24
+p5p6_ensamblaje,P5+P6: Ensamblaje (2 pers),5986,168,0.85,2,41.92
