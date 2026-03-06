@@ -60,7 +60,8 @@ serve(async (req) => {
     // 5. Canteado y Laminado
     let coste_canteado = 0
     if (canteado_ml) {
-        coste_canteado = canteado_ml * 2.50 // Coste estimado por metro
+        const { data: canteado } = await supabase.from('manipulados').select('precio').eq('id', 'MD-CANT').single()
+        coste_canteado = canteado_ml * (canteado?.precio || 2.50)
     }
 
     const coste_total = total_coste_material + coste_amortizacion + coste_energia + coste_operario + coste_canteado

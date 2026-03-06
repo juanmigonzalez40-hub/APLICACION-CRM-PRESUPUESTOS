@@ -1,99 +1,89 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
 
-:root {
-  /* Colors - Carbon & Premium Accents */
-  --bg-dark: #0a0a0c;
-  --bg-card: rgba(22, 22, 26, 0.7);
-  --accent-primary: #3b82f6; /* Electric Blue */
-  --accent-secondary: #8b5cf6; /* Royal Purple */
-  --text-primary: #f8fafc;
-  --text-secondary: #94a3b8;
-  --border-glass: rgba(255, 255, 255, 0.08);
-  --glass-blur: blur(12px);
-  
-  /* Gradients */
-  --grad-premium: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
-  --grad-dark: linear-gradient(180deg, #1e1e24 0%, #0a0a0c 100%);
-  
-  /* Spacing & Radii */
-  --radius-xl: 24px;
-  --radius-lg: 16px;
-  --radius-md: 12px;
+@theme {
+  --color-primary: #0A0A0B;
+  --color-surface: #171719;
+  --color-accent: #D9FF00;
+  --color-muted: #A1A1AA;
+  --font-sans: "Inter", "Montserrat", sans-serif;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+:root {
+  --background: #0A0A0B;
+  --foreground: #FFFFFF;
+  --muted: #A1A1AA;
+  --accent: #D9FF00;
+  --border: #27272A;
+  
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  background-color: var(--bg-dark);
-  color: var(--text-primary);
-  font-family: 'Inter', sans-serif;
-  min-height: 100vh;
-  overflow-x: hidden;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  display: block;
 }
 
-h1, h2, h3, .font-display {
-  font-family: 'Outfit', sans-serif;
+#root {
+  height: 100%;
+  width: 100%;
 }
 
-/* Glassmorphism Utilities */
+/* Custom Utilities for Premium Industrial Look */
+
 .glass {
-  background: var(--bg-card);
-  backdrop-filter: var(--glass-blur);
-  -webkit-backdrop-filter: var(--glass-blur);
-  border: 1px solid var(--border-glass);
-  border-radius: var(--radius-lg);
+  background: rgba(23, 23, 25, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.glass-hover:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(255, 255, 255, 0.15);
-  transform: translateY(-2px);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+.industrial-grid {
+  background-image: 
+    linear-gradient(to right, rgba(255,255,255,0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size: 40px 40px;
 }
 
-/* Premium Button */
-.btn-premium {
-  background: var(--grad-premium);
-  color: white;
-  padding: 12px 24px;
-  border-radius: var(--radius-md);
-  border: none;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+.glow-accent {
+  box-shadow: 0 0 15px rgba(217, 255, 0, 0.15);
 }
 
-.btn-premium:hover {
-  opacity: 0.9;
-  transform: scale(1.02);
-  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.5);
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
 }
 
-/* Layout Utilities */
-.flex-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+::-webkit-scrollbar-track {
+  background: transparent;
 }
 
-.container-premium {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 2rem;
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 10px;
 }
 
-/* Animations - Subtle Fade In */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
 }
 
-.animate-fade {
-  animation: fadeIn 0.6s ease-out forwards;
+@keyframes slideInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-up {
+  animation: slideInUp 0.4s ease-out forwards;
 }
